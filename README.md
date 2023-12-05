@@ -8,7 +8,7 @@
                 |___ sample_id2 --- .tsv file 
                 |____ ....
                 .
-                .___ sample_idn --- .tsv file 
+                .___ sample_idn --- .tsv file  
 
     This script sorts the tsv files by storing each tsv file under their respective case ID's (i.e. patient ID). 
     So the processed data files will be stored under data/processed_data like this: 
