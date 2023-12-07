@@ -1,6 +1,8 @@
 # MAIN PIPELINE
 
-### STEP 1: Sort Data Script (under sorting_scripts)
+### STEP 1: Sort Data Script (under data_preparation)
+
+    FILE NAME: sort_data.ipynb
 
     Data under data/raw_data looks like: 
         
@@ -37,23 +39,36 @@
     NOTE: This script queries GDC Endpoint for Case ID
                       
 
-### STEP 2: Sort Labels Script (under sorting_scripts)
+### STEP 2: Sort Labels Script (under data_preparation)
+
+    FILE NAME: sort_labels.ipynb
 
     TSV Data under data/raw_labels contains every single column in clinical data. 
     This script filters for the following columns: 
     - 'case_id'
     - 'age_at_index'
     - 'gender'
+    - 'race'
     - 'ajcc_pathologic_stage'
     - 'primary_diagnosis'
     - 'prior_malignancy'
 
     Filtered tsv file is written out to data/processed_labels
 
-### STEP 3: Main.ipynb 
+### STEP 3: Prepare Model Data Script (under data_preparation)
 
-    At this step, we've processed the input CNV data as well as the clinical data with each patient's primary diagnosis. 
-    Hopefully we can train the models here. 
+    FILE NAME: prepare_model_data.ipynb
+
+    - Each sample is filtered for only [chromosome number, CNV number, and gene length]
+    - Then each sample's chromosome numbers is one hot encoded
+    - All the samples are saved into a dataframe. Each row contains the [race, sample data, diagnosis] of a given sample
+    - dataframe saved to data/model_data.pkl
+
+### STEP 4: Train and test models
+
+    Here, the model data dataframe is loaded from data/model_data.pkl and processed for training / testing for each script. 
+
+    baseline.ipynb tests baseline models 
 
 
 # DATA ANALYSIS 
@@ -62,3 +77,5 @@
 
     This script currently looks at the distribution of the primary diagnosis. It also demonstrates a notable difference
     between infiltrating ductal carcinoma, lobular carcinoma, infiltrating ductal & lobular carcinoma, and other rarer types
+
+    End of script displays the distribution of race amongst the sample data. 
