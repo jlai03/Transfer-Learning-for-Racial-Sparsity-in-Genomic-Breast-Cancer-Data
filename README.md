@@ -64,12 +64,37 @@
     - All the samples are saved into a dataframe. Each row contains the [race, sample data, diagnosis] of a given sample
     - dataframe saved to data/model_data.pkl
 
-### STEP 4: Train and test models
+### STEP 4: Baseline models (under baseline_models)
 
     Here, the model data dataframe is loaded from data/model_data.pkl and processed for training / testing for each script. 
 
-    baseline.ipynb tests baseline models 
+    Under baseline_models, we train the following models on data from white patients and test it on
+    black + african american patients, and asian patients spearately. These are the the baseline 
+    metrics (per recommendation of TA). 
 
+        - DNN 
+        - LSTM 
+        - SVM 
+        - Transformer 
+
+    Each script contains code to run a single trial of each model. Reported results aggregates 
+    avg. across 50 trial runs. 
+
+### STEP 5: Transfer Learning models (under transfer_learning_models)
+
+    Here, the model data dataframe is loaded from data/model_data.pkl and processed for training / testing for each script. 
+
+    Under transfer_learning_models, we train the following models on data from white patients and 
+    leverage transfer learning accordingly to test on data from black + african american patients, and asian patients spearately. 
+
+        - DNN 
+        - LSTM 
+        - SVM 
+        - Transformer 
+
+    These scripts test model behavior for two transfer learning techniques: (1) fine tuning alone, 
+    as well as (2) freezing layers + fine tuning. Each script contains code to run a single trial 
+    of each model. Reported results aggregates avg. across 50 trial runs. 
 
 # DATA ANALYSIS 
 
