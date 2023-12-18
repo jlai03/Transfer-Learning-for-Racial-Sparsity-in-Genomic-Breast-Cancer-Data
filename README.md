@@ -1,4 +1,4 @@
-# MAIN PIPELINE
+# Transfer Learning for Sparsity in Genomic Male Breast Cancer Data 
 
 ### STEP 1: Sort Data Script (under data_preparation)
 
