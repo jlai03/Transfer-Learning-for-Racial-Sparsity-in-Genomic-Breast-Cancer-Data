@@ -1,4 +1,4 @@
-# Transfer Learning for Sparsity in Genomic Male Breast Cancer Data 
+# Transfer Learning for Racial Sparsity in Genomic Breast Cancer Data
 
 ### STEP 1: Sort Data Script (under data_preparation)
 
