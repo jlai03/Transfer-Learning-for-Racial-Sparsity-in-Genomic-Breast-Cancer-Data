@@ -74,8 +74,9 @@
 
         - DNN 
         - LSTM 
-        - SVM 
         - Transformer 
+        - SVM 
+        - XG Boost
 
     Each script contains code to run a single trial of each model. Reported results aggregates 
     avg. across 50 trial runs. 
@@ -89,7 +90,6 @@
 
         - DNN 
         - LSTM 
-        - SVM 
         - Transformer 
 
     These scripts test model behavior for two transfer learning techniques: (1) fine tuning alone, 
