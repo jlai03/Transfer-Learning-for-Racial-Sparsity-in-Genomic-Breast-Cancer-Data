@@ -94,7 +94,7 @@
         - Transformer 
 
     These scripts test model behavior for two transfer learning techniques: (1) fine tuning alone, 
-    as well as (2) freezing layers + fine tuning. Each script contains code to run a single trial 
+    as well as (2) freezing layers + fine tuning [i.e. feature-based TL]. Each script contains code to run a single trial 
     of each model. Reported results aggregates avg. across 50 trial runs. 
 
 # DATA ANALYSIS 
