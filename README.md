@@ -68,9 +68,9 @@
 
     Here, the model data dataframe is loaded from data/model_data.pkl and processed for training / testing for each script. 
 
-    Under baseline_models, we train the following models on data from white patients and test it on
-    black + african american patients, and asian patients spearately. These are the the baseline 
-    metrics (per recommendation of TA). 
+    Under baseline_models, we train the following models on data from white patients and 
+    test it on black + african american patients, and asian patients spearately. 
+    These are the trials for collecting baseline metrics (per recommendation of TA). 
 
         - DNN 
         - LSTM 
@@ -85,8 +85,9 @@
 
     Here, the model data dataframe is loaded from data/model_data.pkl and processed for training / testing for each script. 
 
-    Under transfer_learning_models, we train the following models on data from white patients and 
-    leverage transfer learning accordingly to test on data from black + african american patients, and asian patients spearately. 
+    Under transfer_learning_models, we train the following models on data from white
+    patients and leverage transfer learning accordingly to test on data from black + 
+    african american patients, and asian patients separately. 
 
         - DNN 
         - LSTM 
